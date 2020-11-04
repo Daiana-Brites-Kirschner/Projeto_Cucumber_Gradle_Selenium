@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cenário: Deve incrementar o contador" tests="4" skipped="0" failures="0" errors="0" timestamp="2020-11-04T13:53:28" hostname="kirschner" time="0.007">
+  <properties/>
+  <testcase name="Dado que o valor do contador é 15" classname="Cenário: Deve incrementar o contador" time="0.001"/>
+  <testcase name="Quando eu incrementar em 3" classname="Cenário: Deve incrementar o contador" time="0.001"/>
+  <testcase name="Então o valor do contador será 18" classname="Cenário: Deve incrementar o contador" time="0.0"/>
+  <testcase name="classMethod" classname="Cenário: Deve incrementar o contador" time="0.111"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
