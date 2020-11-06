@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - Class Cenario: Não deve alugar um filme sem estoque</title>
+<title>Test results - Class | 4 | comum | 4 | 1 | 1 |</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>Class Cenario: Não deve alugar um filme sem estoque</h1>
+<h1>Class | 4 | comum | 4 | 1 | 1 |</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/default-package.html">default-package</a> &gt; Cenario: Não deve alugar um filme sem estoque</div>
+<a href="../packages/default-package.html">default-package</a> &gt; | 4 | comum | 4 | 1 | 1 |</div>
 <div id="summary">
 <table>
 <tr>
@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">5</div>
+<div class="counter">8</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.007s</div>
+<div class="counter">0.012s</div>
 <p>duration</p>
 </div>
 </td>
@@ -78,17 +78,32 @@
 </tr>
 </thead>
 <tr>
-<td class="success">Dado um filme com estoque de 0 unidades</td>
+<td class="success">Dado um filme com estoque de 2 unidades</td>
 <td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">E o estoque do filme será 0 unidade</td>
+<td class="success">E a data de entrega será em 1 dias</td>
 <td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Entao não será possível por falta de estoque</td>
+<td class="success">E a pontuação recebida será de 1 pontos</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">E que o preço de aluguel seja R$4</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">E que o tipo do aluguel seja comum</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Entao o preço do aluguel será R$ 4</td>
 <td class="success">0s</td>
 <td class="success">passed</td>
 </tr>
@@ -99,7 +114,7 @@
 </tr>
 <tr>
 <td class="success">classMethod</td>
-<td class="success">0.007s</td>
+<td class="success">0.012s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -108,12 +123,15 @@
 <h2>Standard output</h2>
 <span class="code">
 <pre>
-  Cenario: Deve alugar um filme com sucesso # alugar_filme.feature:8
-    Dado um filme                           # AlugarFilmesSteps.umFilme(DataTable)
-    Quando alugar                           # AlugarFilmesSteps.alugar()
-    Entao o preço do aluguel será R$ 3      # AlugarFilmesSteps.o_preço_do_aluguel_será_R$(int)
-    E a data de entrega será em 1 dia       # AlugarFilmesSteps.aDataDeEntregaSeráEmDias(int)
-    E o estoque do filme será 1 unidade     # AlugarFilmesSteps.oEstoqueDoFilmeSeráUnidade(int)
+  @esse
+  Esquema do Cenario: Deve dar condições conforme tipo de aluguel # alugar_filme.feature:35
+    Dado um filme com estoque de 2 unidades                       # AlugarFilmesSteps.um_filme_com_estoque_de_unidades(int)
+    E que o preço de aluguel seja R$4                             # AlugarFilmesSteps.que_o_preço_de_aluguel_seja_R$(int)
+    E que o tipo do aluguel seja extendido                        # AlugarFilmesSteps.queOTipoDoAluguelSejaExtendido(String)
+    Quando alugar                                                 # AlugarFilmesSteps.alugar()
+    Entao o preço do aluguel será R$ 8                            # AlugarFilmesSteps.o_preço_do_aluguel_será_R$(int)
+    E a data de entrega será em 3 dias                            # AlugarFilmesSteps.aDataDeEntregaSeráEmDias(int)
+    E a pontuação recebida será de 2 pontos                       # AlugarFilmesSteps.aPontuaçãoRecebidaSeráDePontos(int)
 </pre>
 </span>
 </div>

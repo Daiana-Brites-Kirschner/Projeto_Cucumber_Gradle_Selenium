@@ -1,10 +1,12 @@
 package steps;
 
+import cucumber.api.DataTable;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
 import entidades.Filme;
 import entidades.NotaAluguel;
+import entidades.TipoAluguel;
 import org.junit.Assert;
 import service.AluguelService;
 import utils.DateUtils;
@@ -13,6 +15,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Map;
 
 
 public class AlugarFilmesSteps {
@@ -20,7 +23,7 @@ public class AlugarFilmesSteps {
     private AluguelService aluguel =new AluguelService();
     private NotaAluguel nota;
     private String erro;
-    private String tipoAluguel;
+    private TipoAluguel tipoAluguel;
 
     @Dado("^um filme com estoque de (\\d+) unidades$")
     public void um_filme_com_estoque_de_unidades(int arg1) throws Throwable {
@@ -32,6 +35,17 @@ public class AlugarFilmesSteps {
     public void que_o_preço_de_aluguel_seja_R$(int arg1) throws Throwable {
         filme.setAluguel(arg1);
     }
+
+    @Dado("^um filme$")
+    public void umFilme(DataTable table) throws Throwable {
+        Map<String, String> map = table.asMap(String.class, String.class);
+        filme = new Filme();
+        filme.setEstoque(Integer.parseInt(map.get("estoque")));
+        filme.setAluguel(Integer.parseInt(map.get("preco")));
+        String tipo = map.get("tipo");
+        tipoAluguel = tipo.equals("semanal")? TipoAluguel.SEMANAL: tipo.equals("extendido")? TipoAluguel.EXTENDIDO: TipoAluguel.COMUM;
+    }
+
 
     @Quando("^alugar$")
     public void alugar() throws Throwable {
@@ -74,7 +88,7 @@ public class AlugarFilmesSteps {
 
     @Dado("^que o tipo do aluguel seja (.*)$")
     public void queOTipoDoAluguelSejaExtendido(String tipo) throws Throwable {
-        tipoAluguel = tipo;
+        tipoAluguel = tipo.equals("semanal")? TipoAluguel.SEMANAL: tipo.equals("extendido")? TipoAluguel.EXTENDIDO: TipoAluguel.COMUM;
     }
 
     @Entao("^a data de entrega será em (\\d+) dias?$")
