@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cenario: Deve alugar para categoria comum" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-11-06T01:02:12" hostname="kirschner" time="0.005">
+  <properties/>
+  <testcase name="Dado um filme com estoque de 2 unidades" classname="Cenario: Deve alugar para categoria comum" time="0.0"/>
+  <testcase name="E que o preço de aluguel seja R$4" classname="Cenario: Deve alugar para categoria comum" time="0.0"/>
+  <testcase name="E que o tipo do aluguel seja comum" classname="Cenario: Deve alugar para categoria comum" time="0.0"/>
+  <testcase name="Quando alugar" classname="Cenario: Deve alugar para categoria comum" time="0.001"/>
+  <testcase name="Entao o preço do aluguel será R$ 4" classname="Cenario: Deve alugar para categoria comum" time="0.0"/>
+  <testcase name="E a data de entrega será em 1 dia" classname="Cenario: Deve alugar para categoria comum" time="0.0"/>
+  <testcase name="E a pontuação recebida será de 1 pontos" classname="Cenario: Deve alugar para categoria comum" time="0.0"/>
+  <testcase name="classMethod" classname="Cenario: Deve alugar para categoria comum" time="0.007"/>
+  <system-out><![CDATA[
+  Cenario: Deve dar condições especiais para categoria extendida # alugar_filme.feature:22
+    Dado um filme com estoque de 2 unidades                      # AlugarFilmesSteps.um_filme_com_estoque_de_unidades(int)
+    E que o preço de aluguel seja R$4                            # AlugarFilmesSteps.que_o_preço_de_aluguel_seja_R$(int)
+    E que o tipo do aluguel seja extendido                       # AlugarFilmesSteps.queOTipoDoAluguelSejaExtendido(String)
+    Quando alugar                                                # AlugarFilmesSteps.alugar()
+    Entao o preço do aluguel será R$ 8                           # AlugarFilmesSteps.o_preço_do_aluguel_será_R$(int)
+    E a data de entrega será em 3 dias                           # AlugarFilmesSteps.aDataDeEntregaSeráEmDias(int)
+    E a pontuação recebida será de 2 pontos                      # AlugarFilmesSteps.aPontuaçãoRecebidaSeráDePontos(int)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

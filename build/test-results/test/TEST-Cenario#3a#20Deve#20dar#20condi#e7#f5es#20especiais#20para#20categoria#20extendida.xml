@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cenario: Deve dar condições especiais para categoria extendida" tests="8" skipped="0" failures="0" errors="0" timestamp="2020-11-06T01:02:12" hostname="kirschner" time="0.007">
+  <properties/>
+  <testcase name="Dado um filme com estoque de 2 unidades" classname="Cenario: Deve dar condições especiais para categoria extendida" time="0.0"/>
+  <testcase name="E que o preço de aluguel seja R$4" classname="Cenario: Deve dar condições especiais para categoria extendida" time="0.001"/>
+  <testcase name="E que o tipo do aluguel seja extendido" classname="Cenario: Deve dar condições especiais para categoria extendida" time="0.0"/>
+  <testcase name="Quando alugar" classname="Cenario: Deve dar condições especiais para categoria extendida" time="0.0"/>
+  <testcase name="Entao o preço do aluguel será R$ 8" classname="Cenario: Deve dar condições especiais para categoria extendida" time="0.0"/>
+  <testcase name="E a data de entrega será em 3 dias" classname="Cenario: Deve dar condições especiais para categoria extendida" time="0.001"/>
+  <testcase name="E a pontuação recebida será de 2 pontos" classname="Cenario: Deve dar condições especiais para categoria extendida" time="0.0"/>
+  <testcase name="classMethod" classname="Cenario: Deve dar condições especiais para categoria extendida" time="0.012"/>
+  <system-out><![CDATA[
+  Cenario: Não deve alugar um filme sem estoque  # alugar_filme.feature:16
+    Dado um filme com estoque de 0 unidades      # AlugarFilmesSteps.um_filme_com_estoque_de_unidades(int)
+    Quando alugar                                # AlugarFilmesSteps.alugar()
+    Entao não será possível por falta de estoque # AlugarFilmesSteps.nãoSeráPossívelPorFaltaDeEstoque()
+    E o estoque do filme será 0 unidade          # AlugarFilmesSteps.oEstoqueDoFilmeSeráUnidade(int)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

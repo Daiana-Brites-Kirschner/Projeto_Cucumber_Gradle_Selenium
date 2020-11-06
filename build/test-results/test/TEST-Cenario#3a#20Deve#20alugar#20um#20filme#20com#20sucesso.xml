@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cenario: Deve alugar um filme com sucesso" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-11-05T20:27:46" hostname="kirschner" time="0.014">
+<testsuite name="Cenario: Deve alugar um filme com sucesso" tests="7" skipped="0" failures="0" errors="0" timestamp="2020-11-06T01:02:12" hostname="kirschner" time="0.005">
   <properties/>
-  <testcase name="Dado um filme com estoque de 2unidades" classname="Cenario: Deve alugar um filme com sucesso" time="0.0"/>
-  <testcase name="E que o preço de aluguel seja R$3" classname="Cenario: Deve alugar um filme com sucesso" time="0.001"/>
+  <testcase name="Dado um filme com estoque de 2 unidades" classname="Cenario: Deve alugar um filme com sucesso" time="0.0"/>
+  <testcase name="E que o preço de aluguel seja R$3" classname="Cenario: Deve alugar um filme com sucesso" time="0.0"/>
   <testcase name="Quando alugar" classname="Cenario: Deve alugar um filme com sucesso" time="0.0"/>
-  <testcase name="Entao o preço do aluguel será R$ 3" classname="Cenario: Deve alugar um filme com sucesso" time="0.0"/>
-  <testcase name="E a data de entrega será no dia seguinte" classname="Cenario: Deve alugar um filme com sucesso" time="0.0"/>
+  <testcase name="Entao o preço do aluguel será R$ 3" classname="Cenario: Deve alugar um filme com sucesso" time="0.001"/>
+  <testcase name="E a data de entrega será em 1 dia" classname="Cenario: Deve alugar um filme com sucesso" time="0.001"/>
   <testcase name="E o estoque do filme será 1 unidade" classname="Cenario: Deve alugar um filme com sucesso" time="0.0"/>
-  <testcase name="classMethod" classname="Cenario: Deve alugar um filme com sucesso" time="0.016"/>
+  <testcase name="classMethod" classname="Cenario: Deve alugar um filme com sucesso" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
